@@ -12,6 +12,10 @@
 		EF882DBD1D248AB200BF7ED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF882DBB1D248AB200BF7ED4 /* Main.storyboard */; };
 		EF882DBF1D248AB200BF7ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF882DBE1D248AB200BF7ED4 /* Assets.xcassets */; };
 		EF882DC21D248AB200BF7ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF882DC01D248AB200BF7ED4 /* LaunchScreen.storyboard */; };
+		EF882DCA1D25636500BF7ED4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF882DC91D25636500BF7ED4 /* Post.swift */; };
+		EF882DCE1D256D0900BF7ED4 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF882DCD1D256D0900BF7ED4 /* PostCell.swift */; };
+		EF882DD11D25850F00BF7ED4 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF882DD01D25850F00BF7ED4 /* AddPostVC.swift */; };
+		EF882DD41D259D9100BF7ED4 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF882DD31D259D9100BF7ED4 /* DataServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		EF882DBE1D248AB200BF7ED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF882DC11D248AB200BF7ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF882DC31D248AB200BF7ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF882DC91D25636500BF7ED4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EF882DCD1D256D0900BF7ED4 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		EF882DD01D25850F00BF7ED4 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		EF882DD31D259D9100BF7ED4 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,7 @@
 		EF882DAB1D248AB200BF7ED4 = {
 			isa = PBXGroup;
 			children = (
+				EF882DD21D259CE500BF7ED4 /* Services  */,
 				EF882DB61D248AB200BF7ED4 /* myHoodApp */,
 				EF882DB51D248AB200BF7ED4 /* Products */,
 			);
@@ -54,14 +63,49 @@
 		EF882DB61D248AB200BF7ED4 /* myHoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				EF882DCF1D2582AD00BF7ED4 /* Controller */,
+				EF882DCC1D256CEA00BF7ED4 /* Model */,
+				EF882DCB1D256CE300BF7ED4 /* View */,
 				EF882DB71D248AB200BF7ED4 /* AppDelegate.swift */,
-				EF882DB91D248AB200BF7ED4 /* ViewController.swift */,
-				EF882DBB1D248AB200BF7ED4 /* Main.storyboard */,
 				EF882DBE1D248AB200BF7ED4 /* Assets.xcassets */,
-				EF882DC01D248AB200BF7ED4 /* LaunchScreen.storyboard */,
 				EF882DC31D248AB200BF7ED4 /* Info.plist */,
 			);
 			path = myHoodApp;
+			sourceTree = "<group>";
+		};
+		EF882DCB1D256CE300BF7ED4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF882DBB1D248AB200BF7ED4 /* Main.storyboard */,
+				EF882DC01D248AB200BF7ED4 /* LaunchScreen.storyboard */,
+				EF882DCD1D256D0900BF7ED4 /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EF882DCC1D256CEA00BF7ED4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF882DC91D25636500BF7ED4 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF882DCF1D2582AD00BF7ED4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF882DB91D248AB200BF7ED4 /* ViewController.swift */,
+				EF882DD01D25850F00BF7ED4 /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EF882DD21D259CE500BF7ED4 /* Services  */ = {
+			isa = PBXGroup;
+			children = (
+				EF882DD31D259D9100BF7ED4 /* DataServices.swift */,
+			);
+			name = "Services ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF882DCA1D25636500BF7ED4 /* Post.swift in Sources */,
 				EF882DBA1D248AB200BF7ED4 /* ViewController.swift in Sources */,
+				EF882DD11D25850F00BF7ED4 /* AddPostVC.swift in Sources */,
+				EF882DD41D259D9100BF7ED4 /* DataServices.swift in Sources */,
 				EF882DB81D248AB200BF7ED4 /* AppDelegate.swift in Sources */,
+				EF882DCE1D256D0900BF7ED4 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
